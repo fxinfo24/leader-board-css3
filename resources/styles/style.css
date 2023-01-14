@@ -1,0 +1,188 @@
+/* Default Reset All Setting */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Common styles or utilities */
+
+html {
+    font-size: 16px;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f1ff;
+}
+/* Above code (body tag) has same result as line 12 */
+/* body{
+    background-color:#f3f1ff;
+} */
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    background-color: white;
+    width: 870px;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Style starts here */
+/* Top player's style */
+
+#top-player-title{
+    color: #562EFF;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-column: repeat(3, 1fr); */
+    grid-row-gap: 30px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.players img {
+    width: 56px;
+    height: 56px;
+}
+
+hr{
+    border: 1px solid #d1d1d1;
+    margin-top: 33px;
+}
+/* Top Blogs Division inside same section */
+.top-blogs >h2{
+    color: #562EFF;
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin-top: 30px;
+
+}
+.blog .thumbnail >img{
+    width: 177px;
+    height: 117px;
+}
+.blog-detail{
+    margin-left: 16px;
+}
+/* Same result yet done on line 87 */
+.blog{
+    display: flex;
+    gap: 16px;
+}
+.blog-detail >h2 {
+    font-size: 20px;
+}
+.blog-detail p{
+    color: gray;
+}
+.blog-detail a{
+    color: #562EFF;
+}
+
+.blogs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 26px;
+}
+/* Latest Courses Styles */
+.latest-courses .banner img{
+    width: 224px;
+    height: 104px;
+}
+.latest-courses .banner p a{
+    color: #ED6B4F;
+}
+.banner i{
+    color: #FFC014;
+    font-size: 12px;
+}
+.banner .rating{
+    display: flex;
+    gap: 10.71px;
+    /* Unnecessary  code Line 123, 124*/
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.banner .rating .duration{
+    background-color: rgb(255, 228, 232);
+    border-radius: 10px;
+}
+.latest-courses{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 23.61px;
+}
+
+/* Media Queries Starts Here*/
+
+/* Mobile Devices Players*/
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: 1fr;
+    }
+    .player{
+        flex-direction: column;
+    }
+}
+/* Mobile Device Blogs */
+@media only screen and (max-width: 688px) {
+    .blogs{
+        grid-template-columns: 1fr;
+    }
+    .blog{
+        flex-direction: column;
+    }
+}
+/* Mobile Devices Latest Courses */
+@media only screen and ( max-width: 688px) {
+    .latest-courses{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tab or Pad Players */
+@media only screen and (max-width: 992px) {
+    .players{
+        grid-template-columns: 1fr 1fr;
+    }
+    .player{
+        flex-direction: column;
+    }
+}
+/* Tablet Device Blogs */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .blogs{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet Courses */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .latest-courses{
+        grid-template-columns: 1fr;
+    }
+}
